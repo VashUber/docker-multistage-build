@@ -1,0 +1,11 @@
+version: "3.8"
+name: "multi-stage-prod"
+
+services:
+  front:
+    container_name: prod_front
+    build:
+      context: .
+      target: prod
+    ports:
+      - "4000:80"

@@ -1,0 +1,11 @@
+version: "3.8"
+name: "multi-stage-dev"
+
+services:
+  front:
+    container_name: dev_front
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
